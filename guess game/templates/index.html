@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Dumshalads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>🎉 Technical Dumshalads 🎉</h1>
+    <div class="game-info">
+        <p id="clue">📝 Clue: {{ clue }}</p>
+        <p id="word">Word: {{ display_word }}</p>
+        <p class="score">Score: {{ score }}</p>
+        <p class="attempts">Attempts: <span id="hearts"></span></p>
+    </div>
+    <div class="container">
+        <input type="text" id="letter" maxlength="1" placeholder="Enter a letter" />
+        <button onclick="submitGuess()">Guess</button>
+    </div>
+    <button onclick="startNewGame()">Start New Game</button>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
